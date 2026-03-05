@@ -10,7 +10,7 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <MotionHeader
-          className="text-5xl md:text-7xl mb-6 bg-linear-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+          className="text-5xl md:text-7xl mb-6 gradient-text1 bg-clip-text text-transparent"
           animate={{
             backgroundPosition: ['0%', '100%', '0%'],
           }}

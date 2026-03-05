@@ -1,6 +1,6 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 @layer base {
@@ -11,6 +11,12 @@
   }
   .three-bg {
     @apply bg-linear-to-br from-purple-900 via-blue-900 to-pink-900;
+  }
+  .gradient-text1 {
+    @apply bg-linear-to-r from-pink-400 via-purple-400 to-cyan-400;
+  }
+  .gradient-text2 {
+    @apply bg-linear-to-r from-cyan-400 via-purple-500 to-pink-500;
   }
   * {
     @apply border-border outline-ring/50;

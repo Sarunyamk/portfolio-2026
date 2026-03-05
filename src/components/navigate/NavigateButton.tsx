@@ -1,4 +1,5 @@
 'use client';
+import { scrollToSection } from '@/lib/scroll-section';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 
@@ -8,13 +9,6 @@ type NavigateButtonProps = {
 };
 
 export default function NavigateButton({ label, id }: NavigateButtonProps) {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <Link href={id}>
       <Button variant="ghost" size="sm" onClick={() => scrollToSection(id)}>

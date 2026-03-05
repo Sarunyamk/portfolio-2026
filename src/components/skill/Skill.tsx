@@ -1,13 +1,18 @@
+'use client';
+
 import { SKILLS } from '@/constants/skill.constant';
+import { useLanguage } from '@/hooks/useLanguage';
 import Image from 'next/image';
 import { MotionDiv } from '../motion/wrapper-motion';
 
 const Skills = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="skills" className="py-20 text-center">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl md:text-7xl mb-6 text-gradient-1 py-10">
-          Skills
+          {t.skills.heading}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

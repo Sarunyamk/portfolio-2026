@@ -1,7 +1,12 @@
+'use client';
+
+import { useLanguage } from '@/hooks/useLanguage';
 import { MotionDiv, MotionHeader } from '../motion/wrapper-motion';
 import TypeAnimationText from './TypeAnimationText';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="pt-40 text-center">
       <MotionDiv
@@ -20,10 +25,10 @@ export default function Hero() {
             ease: 'linear',
           }}
         >
-          Creative Developer
+          {t.hero.title}
         </MotionHeader>
       </MotionDiv>
-      <TypeAnimationText />
+      <TypeAnimationText typing={t.hero.typing} />
     </section>
   );
 }

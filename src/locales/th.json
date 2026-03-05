@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "หน้าแรก",
+    "skills": "ทักษะ",
+    "projects": "ผลงาน"
+  },
+  "hero": {
+    "title": "นักพัฒนาเว็บไซต์",
+    "typing": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer",
+      "Web Developer",
+      "UI/UX Designer"
+    ]
+  },
+  "skills": {
+    "heading": "ทักษะ"
+  },
+  "projects": {
+    "heading": "ผลงานที่น่าสนใจ",
+    "viewProject": "ดูผลงาน",
+    "items": [
+      {
+        "title": "พอร์ตโฟลิโอ 3D แบบอินเทอร์แอคทีฟ",
+        "description": "เว็บไซต์พอร์ตโฟลิโอที่สวยงามพร้อม Three.js animations และประสบการณ์ผู้ใช้แบบ immersive"
+      },
+      {
+        "title": "แพลตฟอร์ม E-Commerce",
+        "description": "ระบบ e-commerce แบบ full-stack พร้อมการจัดการสินค้าคงคลังแบบ real-time และการประมวลผลการชำระเงิน"
+      },
+      {
+        "title": "แดชบอร์ด Social Media",
+        "description": "แดชบอร์ดวิเคราะห์ข้อมูลพร้อมการแสดงผลข้อมูลที่สวยงามและการอัปเดตแบบ real-time"
+      },
+      {
+        "title": "แชทบอท AI",
+        "description": "แชทบอทอัจฉริยะพร้อมการประมวลผลภาษาธรรมชาติและ machine learning"
+      },
+      {
+        "title": "แอป Fitness บนมือถือ",
+        "description": "แอปติดตามการออกกำลังกายแบบ cross-platform พร้อมแผนการออกกำลังกายและการติดตามความคืบหน้า"
+      },
+      {
+        "title": "เครื่องมือทำงานร่วมกันแบบ Real-Time",
+        "description": "แพลตฟอร์มทำงานร่วมกันเป็นทีมพร้อมการแก้ไขสดและการประชุมทางวิดีโอ"
+      }
+    ]
+  }
+}

@@ -1,4 +1,7 @@
+'use client';
+
 import { PROJECTS } from '@/constants/project.constant';
+import { useLanguage } from '@/hooks/useLanguage';
 import { GitCommit } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,6 +19,8 @@ import {
 } from '../ui/card';
 
 export default function Project() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="projects"
@@ -23,7 +28,7 @@ export default function Project() {
     >
       <div className="relative z-10 max-w-7xl w-full">
         <h2 className="text-5xl md:text-7xl mb-6 text-gradient-1 py-10">
-          Featured Projects
+          {t.projects.heading}
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -31,9 +36,9 @@ export default function Project() {
             <Card key={index}>
               <CardHeader>
                 <CardTitle>
-                  <h2>{project.title}</h2>
+                  <h2>{t.projects.items[index]?.title ?? project.title}</h2>
                 </CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardDescription>{t.projects.items[index]?.description ?? project.description}</CardDescription>
                 <CardAction>
                   <MotionDiv>
                     <Link href={project.github}>
@@ -62,7 +67,7 @@ export default function Project() {
               <CardFooter>
                 <MotionDiv>
                   <Link href={project.linkVideo}>
-                    <Button>View Project</Button>
+                    <Button>{t.projects.viewProject}</Button>
                   </Link>
                 </MotionDiv>
               </CardFooter>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ModeToggle } from '../theme/ModeToggle';
 import DesktopMenu from './DesktopMenu';
+import { LangToggle } from './LangToggle';
 import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
@@ -44,7 +45,8 @@ export default function Navbar() {
 
         <MobileMenu activeSection={activeSection} />
 
-        <div className="hidden md:block ">
+        <div className="hidden md:flex items-center gap-2">
+          <LangToggle />
           <ModeToggle />
         </div>
       </div>{' '}

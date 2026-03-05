@@ -1,10 +1,12 @@
 'use client';
 
 import { NAVBAR_ITEMS } from '@/constants/nav-items';
+import { useLanguage } from '@/hooks/useLanguage';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { ModeToggle } from '../theme/ModeToggle';
 import { Button } from '../ui/button';
+import { LangToggle } from './LangToggle';
 import NavigateButton from './NavigateButton';
 
 type Props = {
@@ -13,6 +15,7 @@ type Props = {
 
 export default function MobileMenu({ activeSection }: Props) {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <div className="md:hidden">
@@ -47,14 +50,15 @@ export default function MobileMenu({ activeSection }: Props) {
             {NAVBAR_ITEMS.map((item) => (
               <div key={item.id} onClick={() => setOpen(false)}>
                 <NavigateButton
-                  label={item.label}
+                  label={t.nav[item.id as keyof typeof t.nav]}
                   id={item.id}
                   active={activeSection}
                 />
               </div>
             ))}
 
-            <div className="text-lg cursor-pointer">
+            <div className="flex items-center gap-2">
+              <LangToggle />
               <ModeToggle />
             </div>
           </div>

@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Tech Stack",
+    "projects": "Projects"
+  },
+  "hero": {
+    "title": "Creative Developer",
+    "typing": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer",
+      "Web Developer",
+      "UI/UX Designer"
+    ]
+  },
+  "skills": {
+    "heading": "Skills"
+  },
+  "projects": {
+    "heading": "Featured Projects",
+    "viewProject": "View Project",
+    "items": [
+      {
+        "title": "Interactive 3D Portfolio",
+        "description": "A stunning portfolio website with Three.js animations and immersive user experience"
+      },
+      {
+        "title": "E-Commerce Platform",
+        "description": "Full-stack e-commerce solution with real-time inventory and payment processing"
+      },
+      {
+        "title": "Social Media Dashboard",
+        "description": "Analytics dashboard with beautiful data visualizations and real-time updates"
+      },
+      {
+        "title": "AI-Powered Chatbot",
+        "description": "Intelligent chatbot with natural language processing and machine learning"
+      },
+      {
+        "title": "Mobile Fitness App",
+        "description": "Cross-platform fitness tracking app with workout plans and progress monitoring"
+      },
+      {
+        "title": "Real-Time Collaboration Tool",
+        "description": "Team collaboration platform with live editing and video conferencing"
+      }
+    ]
+  }
+}

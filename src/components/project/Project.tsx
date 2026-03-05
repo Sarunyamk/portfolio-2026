@@ -1,0 +1,75 @@
+import { PROJECTS } from '@/constants/project.constant';
+import { GitCommit } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { MotionDiv } from '../motion/wrapper-motion';
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '../ui/card';
+
+export default function Project() {
+  return (
+    <section
+      id="projects"
+      className="relative min-h-screen flex items-center justify-center px-6 py-20"
+    >
+      <div className="relative z-10 max-w-7xl w-full">
+        <h2 className="text-5xl md:text-7xl mb-6 bg-linear-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Featured Projects
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {PROJECTS.map((project, index) => (
+            <Card key={index}>
+              <CardHeader>
+                <CardTitle>
+                  <h2>{project.title}</h2>
+                </CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+                <CardAction>
+                  <MotionDiv>
+                    <Link href={project.github}>
+                      <Button>
+                        <GitCommit />
+                      </Button>
+                    </Link>
+                  </MotionDiv>
+                </CardAction>
+              </CardHeader>
+              <CardContent>
+                <div className="w-full">
+                  <Image
+                    src={'/example.jpg'}
+                    alt="image project"
+                    width={90}
+                    height={90}
+                  />
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, tagIndex) => (
+                    <Badge key={tagIndex}>{tag}</Badge>
+                  ))}
+                </div>
+              </CardContent>
+              <CardFooter>
+                <MotionDiv>
+                  <Link href={project.linkVideo}>
+                    <Button>View Project</Button>
+                  </Link>
+                </MotionDiv>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

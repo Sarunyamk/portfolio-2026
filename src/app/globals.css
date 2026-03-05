@@ -12,11 +12,21 @@
   .three-bg {
     @apply bg-linear-to-br from-purple-900 via-blue-900 to-pink-900;
   }
-  .gradient-text1 {
+
+  .bg-gradient-1 {
     @apply bg-linear-to-r from-pink-400 via-purple-400 to-cyan-400;
   }
-  .gradient-text2 {
+
+  .bg-gradient-2 {
     @apply bg-linear-to-r from-cyan-400 via-purple-500 to-pink-500;
+  }
+
+  .text-gradient-1 {
+    @apply bg-linear-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-2 {
+    @apply bg-linear-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent;
   }
   * {
     @apply border-border outline-ring/50;

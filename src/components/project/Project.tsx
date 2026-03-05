@@ -19,10 +19,10 @@ export default function Project() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen flex items-center justify-center px-6 py-20"
+      className="relative flex items-center justify-center px-6 text-center"
     >
       <div className="relative z-10 max-w-7xl w-full">
-        <h2 className="text-5xl md:text-7xl mb-6 bg-linear-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <h2 className="text-5xl md:text-7xl mb-6 text-gradient-1 py-10">
           Featured Projects
         </h2>
 

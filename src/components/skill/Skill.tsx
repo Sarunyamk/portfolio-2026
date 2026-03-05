@@ -4,10 +4,10 @@ import { MotionDiv } from '../motion/wrapper-motion';
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 text-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          skill
+        <h2 className="text-5xl md:text-7xl mb-6 text-gradient-1 py-10">
+          Skills
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

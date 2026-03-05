@@ -3,6 +3,7 @@
 import { NAVBAR_ITEMS } from '@/constants/nav-items';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { ModeToggle } from '../theme/ModeToggle';
 import { Button } from '../ui/button';
 import NavigateButton from './NavigateButton';
 
@@ -13,13 +14,10 @@ type Props = {
 export default function MobileMenu({ activeSection }: Props) {
   const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
-    setOpen(false);
-  };
-
   return (
     <div className="md:hidden">
       {/* hamburger */}
+
       <Button
         onClick={() => setOpen(true)}
         variant="ghost"
@@ -56,8 +54,8 @@ export default function MobileMenu({ activeSection }: Props) {
               </div>
             ))}
 
-            <div className="text-gradient-1 text-lg cursor-pointer">
-              EN / TH
+            <div className="text-lg cursor-pointer">
+              <ModeToggle />
             </div>
           </div>
         </div>

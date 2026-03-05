@@ -19,7 +19,7 @@ export default function TypeAnimationText() {
       speed={50}
       omitDeletionAnimation={true}
       repeat={Infinity}
-      className="md:font-head text-muted-foreground mb-6"
+      className="md:font-head text-gradient-1 mb-6"
     />
   );
 }

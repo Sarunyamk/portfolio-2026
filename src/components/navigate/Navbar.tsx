@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { ModeToggle } from '../theme/ModeToggle';
 import DesktopMenu from './DesktopMenu';
 import MobileMenu from './MobileMenu';
 
@@ -43,7 +44,9 @@ export default function Navbar() {
 
         <MobileMenu activeSection={activeSection} />
 
-        <div className="hidden md:block text-gradient-1">EN / TH</div>
+        <div className="hidden md:block ">
+          <ModeToggle />
+        </div>
       </div>{' '}
     </nav>
   );

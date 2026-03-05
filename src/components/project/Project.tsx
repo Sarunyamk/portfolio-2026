@@ -26,7 +26,7 @@ export default function Project() {
       id="projects"
       className="relative flex items-center justify-center px-6 text-center"
     >
-      <div className="relative z-10 max-w-7xl w-full">
+      <div className="container relative z-10 max-w-7xl w-full">
         <h2 className="text-5xl md:text-7xl mb-6 text-gradient-1 py-10">
           {t.projects.heading}
         </h2>

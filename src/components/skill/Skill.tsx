@@ -9,8 +9,8 @@ const Skills = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="skills" className="py-20 text-center">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="py-20 text-center px-6">
+      <div className="container mx-auto max-w-7xl">
         <h2 className="text-5xl md:text-7xl mb-6 text-gradient-1 py-10">
           {t.skills.heading}
         </h2>

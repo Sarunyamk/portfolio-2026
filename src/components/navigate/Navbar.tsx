@@ -35,21 +35,23 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="text-gradient-1 font-bold text-lg">
-          &lt;My Portfolio /&gt;
-        </div>
+    <header>
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="text-gradient-1 font-bold text-lg">
+            &lt;My Portfolio /&gt;
+          </div>
 
-        <DesktopMenu activeSection={activeSection} />
+          <DesktopMenu activeSection={activeSection} />
 
-        <MobileMenu activeSection={activeSection} />
+          <MobileMenu activeSection={activeSection} />
 
-        <div className="hidden md:flex items-center gap-2">
-          <LangToggle />
-          <ModeToggle />
-        </div>
-      </div>{' '}
-    </nav>
+          <div className="hidden md:flex items-center gap-2 text-primary">
+            <LangToggle />
+            <ModeToggle />
+          </div>
+        </div>{' '}
+      </nav>
+    </header>
   );
 }

@@ -1,3 +1,4 @@
+import Footer from '@/components/footer/Footer';
 import Hero from '@/components/hero/Hero';
 import Navbar from '@/components/navigate/Navbar';
 import Project from '@/components/project/Project';
@@ -12,6 +13,7 @@ export default function HomePage() {
         <Hero />
         <Skills />
         <Project />
+        <Footer />
       </div>
     </Suspense>
   );

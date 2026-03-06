@@ -24,7 +24,7 @@ export default function Project() {
   return (
     <section
       id="projects"
-      className="relative flex items-center justify-center px-6 text-center"
+      className="relative flex items-center justify-center px-6 text-center py-10"
     >
       <div className="container relative z-10 max-w-7xl w-full">
         <h2 className="text-5xl md:text-7xl mb-6 text-gradient-1 py-10">

@@ -1,12 +1,8 @@
-'use client';
-
-import { useLanguage } from '@/hooks/useLanguage';
+import { LanguageProps } from '@/lib/types/lang.type';
 import { MotionDiv, MotionHeader } from '../motion/wrapper-motion';
 import TypeAnimationText from './TypeAnimationText';
 
-export default function Hero() {
-  const { t } = useLanguage();
-
+export default function Hero({ t }: LanguageProps) {
   return (
     <section id="home" className="pt-40 text-center">
       <MotionDiv

@@ -1,13 +1,9 @@
-'use client';
-
 import { SKILLS } from '@/constants/skill.constant';
-import { useLanguage } from '@/hooks/useLanguage';
+import { LanguageProps } from '@/lib/types/lang.type';
 import Image from 'next/image';
 import { MotionDiv } from '../motion/wrapper-motion';
 
-const Skills = () => {
-  const { t } = useLanguage();
-
+const Skills = ({ t }: LanguageProps) => {
   return (
     <section id="skills" className="py-20 text-center px-6">
       <div className="container mx-auto max-w-7xl">
@@ -15,7 +11,7 @@ const Skills = () => {
           {t.skills.heading}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-primary">
           {SKILLS.map((skill, index) => (
             <MotionDiv
               key={index}

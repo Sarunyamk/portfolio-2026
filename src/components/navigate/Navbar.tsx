@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { ModeToggle } from '../theme/ModeToggle';
 import DesktopMenu from './DesktopMenu';
@@ -39,7 +40,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-gradient-1 font-bold text-lg">
-            &lt;My Portfolio /&gt;
+            <Image src={'/logo.png'} width={60} height={60} alt="logo" />
           </div>
 
           <DesktopMenu activeSection={activeSection} />

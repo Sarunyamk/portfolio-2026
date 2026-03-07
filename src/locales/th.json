@@ -18,32 +18,47 @@
     "heading": "ทักษะ"
   },
   "projects": {
-    "heading": "ผลงานที่น่าสนใจ",
+    "heading": "โปรเจกต์",
     "viewProject": "ดูผลงาน",
+    "viewGit": "ดูบน GitHub",
+    "detail": "รายละเอียดเพิ่มเติม",
+
     "items": [
       {
-        "title": "พอร์ตโฟลิโอ 3D แบบอินเทอร์แอคทีฟ",
-        "description": "เว็บไซต์พอร์ตโฟลิโอที่สวยงามพร้อม Three.js animations และประสบการณ์ผู้ใช้แบบ immersive"
+        "title": "โปรเจกต์เดี่ยว : ร้านอาหาร M&M",
+        "description": "ระบบร้านอาหารออนไลน์ที่ผู้ใช้สามารถดูเมนูและรีวิวได้โดยไม่ต้องล็อกอิน แต่หากต้องการสั่งอาหารต้องสมัครสมาชิกและล็อกอินก่อน เมื่อล็อกอินแล้วสามารถ: สั่งอาหารและชำระเงินผ่าน Stripe แสดงความคิดเห็นหลังชำระเงิน และดูประวัติการสั่งซื้อ นอกจากนี้ยังมีเมนูยอดนิยม รีวิว และความคิดเห็นจากลูกค้าคนอื่นด้วย",
+        "frontend": "React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe",
+        "backend": "Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM , JestTDD"
       },
       {
-        "title": "แพลตฟอร์ม E-Commerce",
-        "description": "ระบบ e-commerce แบบ full-stack พร้อมการจัดการสินค้าคงคลังแบบ real-time และการประมวลผลการชำระเงิน"
+        "title": "โปรเจกต์กลุ่ม : มูลนิธิ Friend Pow",
+        "description": "มูลนิธิในประเทศไทยที่ยังไม่มีเว็บไซต์เป็นของตัวเอง ระบบรองรับการบริจาค การรับอุปการะสัตว์ และแชทบอท AI นอกจากนี้ AI ยังช่วยแอดมินในการสแกนใบคำขออุปการะ รองรับอุปกรณ์ทุกขนาดและหลายภาษา",
+        "frontend": "React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe",
+        "backend": "Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM"
       },
       {
-        "title": "แดชบอร์ด Social Media",
-        "description": "แดชบอร์ดวิเคราะห์ข้อมูลพร้อมการแสดงผลข้อมูลที่สวยงามและการอัปเดตแบบ real-time"
+        "title": "Clone หน้าเว็บ: Gravity",
+        "description": "หน้า Gravity สร้างด้วย React.js ออกแบบด้วย TailwindCSS พร้อม scroll effects จาก React Slick และ animation จาก Framer Motion",
+        "frontend": "React.js , Javascript , TailwindCSS , React Slick , Framer Motion",
+        "backend": ""
       },
       {
-        "title": "แชทบอท AI",
-        "description": "แชทบอทอัจฉริยะพร้อมการประมวลผลภาษาธรรมชาติและ machine learning"
+        "title": "เว็บไซต์อีคอมเมิร์ซ",
+        "description": "เว็บอีคอมเมิร์ซที่ตอบสนองทุกอุปกรณ์ สร้างด้วย Vue.js รองรับรายการสินค้าแบบไดนามิก และประสบการณ์ผู้ใช้ที่ลื่นไหล ผู้ใช้สามารถเรียกดูสินค้า เพิ่มลงตะกร้า และชำระเงินได้อย่างง่ายดาย",
+        "frontend": "Vue3.js , Javascript , TailwindCSS , Pinia",
+        "backend": ""
       },
       {
-        "title": "แอป Fitness บนมือถือ",
-        "description": "แอปติดตามการออกกำลังกายแบบ cross-platform พร้อมแผนการออกกำลังกายและการติดตามความคืบหน้า"
+        "title": "เว็บไซต์ไดเรกทอรี",
+        "description": "แพลตฟอร์มแสดงข้อมูลสถานที่ต่างๆ ค้นหาด้วยชื่อหรือเลือกหมวดหมู่ ล็อกอินด้วย Google หรือ Facebook เพื่อกดถูกใจและดูสถานที่ที่ชื่นชอบ รวมถึงเพิ่มสถานที่ใหม่เพื่อแชร์ให้ผู้อื่นผ่าน Instagram หรือ Facebook",
+        "frontend": "Next.js , Typescript , TailwindCSS , Map Leaflet , Clerk , Supabase , Prisma-ORM",
+        "backend": ""
       },
       {
-        "title": "เครื่องมือทำงานร่วมกันแบบ Real-Time",
-        "description": "แพลตฟอร์มทำงานร่วมกันเป็นทีมพร้อมการแก้ไขสดและการประชุมทางวิดีโอ"
+        "title": "เว็บไซต์ Static ด้วย HTML และ CSS",
+        "description": "เว็บไซต์แบบ Static สร้างด้วย HTML และ CSS ล้วน รองรับ Desktop, iPad และ Mobile ครบทุกขนาดหน้าจอ",
+        "frontend": "HTML , CSS",
+        "backend": ""
       }
     ]
   }

@@ -20,30 +20,44 @@
   "projects": {
     "heading": "Featured Projects",
     "viewProject": "View Project",
+    "viewGit": "View on GitHub",
+    "detail": "More Details",
     "items": [
       {
-        "title": "Interactive 3D Portfolio",
-        "description": "A stunning portfolio website with Three.js animations and immersive user experience"
+        "title": "Individual Project : M&M Restaurant",
+        "description": "An online restaurant system where users can browse menus and read reviews without logging in. To place an order, users must register and log in. Once logged in: place orders and pay via Stripe, leave reviews after payment, and view order history. The website also features popular menus, reviews, and comments from other customers.",
+        "frontend": "React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe",
+        "backend": "Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM , JestTDD"
       },
       {
-        "title": "E-Commerce Platform",
-        "description": "Full-stack e-commerce solution with real-time inventory and payment processing"
+        "title": "Group Project : Friend Pow Foundation",
+        "description": "A foundation in Thailand that did not yet have its own website. Features include donation, adoption, and an AI chatbot. The AI also helps administrators by scanning adoption request forms. The system is accessible on desktop, iPad, and mobile, and supports multiple languages.",
+        "frontend": "React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe",
+        "backend": "Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM"
       },
       {
-        "title": "Social Media Dashboard",
-        "description": "Analytics dashboard with beautiful data visualizations and real-time updates"
+        "title": "Clone Page: Gravity",
+        "description": "The Gravity page is built using React.js with a modern design powered by TailwindCSS, enhanced scrolling effects with React Slick, and animations using Framer Motion.",
+        "frontend": "React.js , Javascript , TailwindCSS , React Slick , Framer Motion",
+        "backend": ""
       },
       {
-        "title": "AI-Powered Chatbot",
-        "description": "Intelligent chatbot with natural language processing and machine learning"
+        "title": "Ecommerce Website",
+        "description": "A responsive e-commerce website built with Vue.js, featuring dynamic product listings and a smooth user experience across desktop, tablet, and mobile. Users can browse, add items to the cart, and complete purchases easily.",
+        "frontend": "Vue3.js , Javascript , TailwindCSS , Pinia",
+        "backend": ""
       },
       {
-        "title": "Mobile Fitness App",
-        "description": "Cross-platform fitness tracking app with workout plans and progress monitoring"
+        "title": "Directory Website",
+        "description": "A platform that displays information about various places. Users can search by name or category. Log in with Google or Facebook to like places and view favourites. Users can also add new places to share with others.",
+        "frontend": "Next.js , Typescript , TailwindCSS , Map Leaflet , Clerk , Supabase , Prisma-ORM",
+        "backend": ""
       },
       {
-        "title": "Real-Time Collaboration Tool",
-        "description": "Team collaboration platform with live editing and video conferencing"
+        "title": "Static Website with HTML and CSS",
+        "description": "A static page built primarily with HTML and CSS, fully responsive across Desktop, iPad, and Mobile devices.",
+        "frontend": "HTML , CSS",
+        "backend": ""
       }
     ]
   }

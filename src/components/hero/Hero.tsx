@@ -1,10 +1,16 @@
 import { LanguageProps } from '@/lib/types/lang.type';
 import { MotionDiv, MotionHeader } from '../motion/wrapper-motion';
+import SwiperImage from './SwiperImage';
 import TypeAnimationText from './TypeAnimationText';
 
 export default function Hero({ t }: LanguageProps) {
   return (
-    <section id="home" className="pt-40 text-center">
+    <section
+      id="home"
+      className="pt-40 flex flex-col justify-center items-center"
+    >
+     <SwiperImage/>
+
       <MotionDiv
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

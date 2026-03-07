@@ -1,14 +1,13 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import en from '@/locales/en.json';
-import th from '@/locales/th.json';
+import { getTranslations, type Lang, type Translations } from '@/lib/get-translations';
 
-export type Translations = typeof en;
+export type { Translations, Lang };
 
 export function useLanguage() {
   const searchParams = useSearchParams();
-  const lang = searchParams.get('lang') === 'th' ? 'th' : 'en';
-  const t: Translations = lang === 'th' ? th : en;
+  const lang: Lang = searchParams.get('lang') === 'th' ? 'th' : 'en';
+  const t: Translations = getTranslations(lang);
   return { lang, t };
 }

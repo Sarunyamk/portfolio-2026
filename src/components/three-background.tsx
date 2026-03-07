@@ -1,9 +1,29 @@
-'use client'
+'use client';
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 export function ThreeBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  function createStarTexture() {
+    const size = 64;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+
+    const ctx = canvas.getContext('2d')!;
+
+    ctx.fillStyle = 'white';
+    ctx.font = '48px serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    ctx.fillText('✦', size / 2, size / 2);
+
+    const texture = new THREE.CanvasTexture(canvas);
+    return texture;
+  }
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -26,8 +46,15 @@ export function ThreeBackground() {
     const particleCount = 1500;
     const posArray = new Float32Array(particleCount * 3);
 
-    for (let i = 0; i < particleCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 100;
+    // for (let i = 0; i < particleCount * 3; i++) {
+    //   posArray[i] = (Math.random() - 0.5) * 100;
+    // }
+    for (let i = 0; i < particleCount; i++) {
+      const i3 = i * 3;
+
+      posArray[i3] = (Math.random() - 0.5) * 40;
+      posArray[i3 + 1] = (Math.random() - 0.5) * 40;
+      posArray[i3 + 2] = (Math.random() - 0.5) * 20;
     }
 
     particlesGeometry.setAttribute(
@@ -35,12 +62,23 @@ export function ThreeBackground() {
       new THREE.BufferAttribute(posArray, 3)
     );
 
+    // const particlesMaterial = new THREE.PointsMaterial({
+    //   size: 0.08,
+    //   color: 0xffffff,
+    //   transparent: true,
+    //   opacity: 0.8,
+    //   blending: THREE.AdditiveBlending,
+    // });
+
+    const starTexture = createStarTexture();
+
     const particlesMaterial = new THREE.PointsMaterial({
-      size: 0.15,
-      color: 0xffffff,
+      size: 0.3,
+      map: starTexture,
       transparent: true,
-      opacity: 0.8,
+      opacity: 0.9,
       blending: THREE.AdditiveBlending,
+      depthWrite: false,
     });
 
     const particlesMesh = new THREE.Points(

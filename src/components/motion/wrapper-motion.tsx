@@ -1,18 +1,13 @@
 'use client';
 
-import { motion, MotionProps } from 'motion/react';
-import { ReactNode } from 'react';
+import { motion } from 'motion/react';
+import { ComponentProps } from 'react';
 
-interface WrapperMotionProps extends MotionProps {
-  children?: ReactNode;
-  className?: string;
-}
+type MotionDivProps = ComponentProps<typeof motion.div>;
+type MotionHeaderProps = ComponentProps<typeof motion.h1>;
+type MotionNavProps = ComponentProps<typeof motion.nav>;
 
-export function MotionDiv({
-  children,
-  className,
-  ...props
-}: WrapperMotionProps) {
+export function MotionDiv({ children, className, ...props }: MotionDivProps) {
   return (
     <motion.div className={className} {...props}>
       {children}
@@ -24,18 +19,15 @@ export function MotionHeader({
   children,
   className,
   ...props
-}: WrapperMotionProps) {
+}: MotionHeaderProps) {
   return (
     <motion.h1 className={className} {...props}>
       {children}
     </motion.h1>
   );
 }
-export function MotionNav({
-  children,
-  className,
-  ...props
-}: WrapperMotionProps) {
+
+export function MotionNav({ children, className, ...props }: MotionNavProps) {
   return (
     <motion.nav className={className} {...props}>
       {children}

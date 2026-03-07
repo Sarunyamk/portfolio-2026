@@ -9,12 +9,13 @@ export default function Hero({ t }: LanguageProps) {
       id="home"
       className="pt-40 flex flex-col justify-center items-center"
     >
-     <SwiperImage/>
+      <SwiperImage />
 
       <MotionDiv
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="mt-20"
       >
         <MotionHeader
           className="text-5xl md:text-7xl mb-6 bg-clip-text text-gradient-1"

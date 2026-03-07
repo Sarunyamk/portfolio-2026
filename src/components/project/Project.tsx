@@ -1,25 +1,13 @@
-'use client';
-
 import { PROJECTS } from '@/constants/project.constant';
-import { useLanguage } from '@/hooks/useLanguage';
-import { GitCommit } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { LanguageProps } from '@/lib/types/lang.type';
 import { MotionDiv } from '../motion/wrapper-motion';
-import { Badge } from '../ui/badge';
-import { Button } from '../ui/button';
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '../ui/card';
+import ProjectCard from './ProjectCard';
 
-export default function Project() {
-  const { t } = useLanguage();
+export default function Project({ t }: LanguageProps) {
+  const labels = {
+    viewProject: t.projects.viewProject,
+    viewGit: t.projects.viewGit,
+  };
 
   return (
     <section
@@ -32,47 +20,26 @@ export default function Project() {
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROJECTS.map((project, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle>
-                  <h2>{t.projects.items[index]?.title ?? project.title}</h2>
-                </CardTitle>
-                <CardDescription>{t.projects.items[index]?.description ?? project.description}</CardDescription>
-                <CardAction>
-                  <MotionDiv>
-                    <Link href={project.github}>
-                      <Button>
-                        <GitCommit />
-                      </Button>
-                    </Link>
-                  </MotionDiv>
-                </CardAction>
-              </CardHeader>
-              <CardContent>
-                <div className="w-full">
-                  <Image
-                    src={'/example.jpg'}
-                    alt="image project"
-                    width={90}
-                    height={90}
-                  />
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex}>{tag}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter>
-                <MotionDiv>
-                  <Link href={project.linkVideo}>
-                    <Button>{t.projects.viewProject}</Button>
-                  </Link>
-                </MotionDiv>
-              </CardFooter>
-            </Card>
-          ))}
+          {PROJECTS.map((project, index) => {
+            const item = t.projects.items[index];
+            if (!item) return null;
+            return (
+              <MotionDiv
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: '-80px' }}
+              >
+                <ProjectCard
+                  project={project}
+                  item={item}
+                  labels={labels}
+                  index={index}
+                />
+              </MotionDiv>
+            );
+          })}
         </div>
       </div>
     </section>

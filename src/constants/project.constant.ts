@@ -1,71 +1,70 @@
-type project = {
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  github: string;
-  linkVideo: string;
-};
+import { Project } from '@/lib/types/project.type';
 
-export const PROJECTS: project[] = [
+export const PROJECTS: Project[] = [
   {
-    title: 'Interactive 3D Portfolio',
-    description:
-      'A stunning portfolio website with Three.js animations and immersive user experience',
-    image:
-      'https://images.unsplash.com/photo-1676799910963-3932099f67e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzY2OTY4NTkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React', 'Three.js', 'TypeScript'],
-    github: '',
-    linkVideo: '',
+    tags: [
+      'React.js',
+      'Javascript',
+      'TailwindCSS',
+      'I18next',
+      'Map Leaflet',
+      'Stripe',
+      'Node.js',
+      'Express.js',
+      'Prisma-ORM',
+      'JestTDD',
+    ],
+    github: 'https://github.com/Sarunyamk/Single_Project_restaurant-client',
+    video: 'https://www.youtube.com/embed/_JBIgbiFiKc?si=3X-UcyIPrsykJOBU',
   },
   {
-    title: 'E-Commerce Platform',
-    description:
-      'Full-stack e-commerce solution with real-time inventory and payment processing',
-    image:
-      'https://images.unsplash.com/photo-1531498860502-7c67cf02f657?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwY29kZXxlbnwxfHx8fDE3NjY4ODQxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React', 'Node.js', 'PostgreSQL'],
-    github: '',
-    linkVideo: '',
+    tags: [
+      'React.js',
+      'Javascript',
+      'TailwindCSS',
+      'I18next',
+      'Map Leaflet',
+      'Stripe',
+      'Node.js',
+      'Express.js',
+      'Prisma-ORM',
+    ],
+    github: 'https://github.com/Sarunyamk/Friend_Pow_Client',
+    video: 'https://www.youtube.com/embed/dUfj8lUBaIQ?si=V72Jn7Mke48gvohm',
   },
   {
-    title: 'Social Media Dashboard',
-    description:
-      'Analytics dashboard with beautiful data visualizations and real-time updates',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc2Njk1MzM2MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['TypeScript', 'React', 'D3.js'],
-    github: '',
-    linkVideo: '',
+    tags: [
+      'React.js',
+      'Javascript',
+      'TailwindCSS',
+      'React Slick',
+      'Framer Motion',
+    ],
+    github: 'https://github.com/Sarunyamk/Clone-Gravity-React.js-.git',
+    video: 'https://www.youtube.com/embed/rZpA83WN1hg?si=Ua_6Coo6XuUBGMD2',
   },
   {
-    title: 'AI-Powered Chatbot',
-    description:
-      'Intelligent chatbot with natural language processing and machine learning',
-    image:
-      'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjY4ODk2NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['Python', 'React', 'OpenAI'],
-    github: '',
-    linkVideo: '',
+    tags: ['Vue3.js', 'Javascript', 'TailwindCSS', 'Pinia'],
+    github: 'https://github.com/Sarunyamk/ecommerce-vue.js.git',
+    video: 'https://www.youtube.com/embed/iAlruy42kiU?si=Fh3RpmnArVRAPWPb',
   },
   {
-    title: 'Mobile Fitness App',
-    description:
-      'Cross-platform fitness tracking app with workout plans and progress monitoring',
-    image:
-      'https://images.unsplash.com/photo-1758599881121-c31bde092252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwd29ya291dCUyMG1vYmlsZXxlbnwxfHx8fDE3NjY5ODA3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React Native', 'Firebase', 'Redux'],
-    github: '',
-    linkVideo: '',
+    tags: [
+      'Next.js',
+      'Typescript',
+      'TailwindCSS',
+      'Map Leaflet',
+      'Clerk',
+      'Supabase',
+      'Prisma-ORM',
+    ],
+    github:
+      'https://github.com/Sarunyamk/workshop_camping-next.js-typescript-.git',
+    video: 'https://www.youtube.com/embed/wz5uYOKw_T0?si=bRx_TQO62nLUDFMs',
   },
   {
-    title: 'Real-Time Collaboration Tool',
-    description:
-      'Team collaboration platform with live editing and video conferencing',
-    image:
-      'https://images.unsplash.com/photo-1739298061707-cefee19941b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjY5NzQ4ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React', 'WebRTC', 'Socket.io'],
-    github: '',
-    linkVideo: '',
+    tags: ['HTML', 'CSS'],
+    github: 'https://github.com/Sarunyamk/CC18_Responsive_homeworkCSS.git',
+    video: 'https://www.youtube.com/embed/IcbrEIYgUco?si=J7jWPODjBK4mgrX-',
   },
 ];

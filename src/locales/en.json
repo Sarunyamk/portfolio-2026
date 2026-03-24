@@ -37,6 +37,18 @@
         "backend": "Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM"
       },
       {
+        "title": "Forty-six Real Estate",
+        "description": "A static website built with Next.js, focused on beautiful design and smooth motion animations.",
+        "frontend": "Next.js , Typescript , TailwindCSS , Framer Motion , I18next",
+        "backend": ""
+      },
+      {
+        "title": "Content video quiz",
+        "description": "A React.js web app for creating quiz sets with customizable colors. Multiple quiz sets are available to choose from.",
+        "frontend": "React.js , Typescript , TailwindCSS , Framer Motion",
+        "backend": ""
+      },
+      {
         "title": "Clone Page: Gravity",
         "description": "The Gravity page is built using React.js with a modern design powered by TailwindCSS, enhanced scrolling effects with React Slick, and animations using Framer Motion.",
         "frontend": "React.js , Javascript , TailwindCSS , React Slick , Framer Motion",

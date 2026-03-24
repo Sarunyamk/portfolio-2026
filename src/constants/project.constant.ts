@@ -33,6 +33,16 @@ export const PROJECTS: Project[] = [
     video: 'https://www.youtube.com/embed/dUfj8lUBaIQ?si=V72Jn7Mke48gvohm',
   },
   {
+    tags: ['Next.js', 'Typescript', 'TailwindCSS', 'I18next', 'Framer Motion'],
+    github: 'https://github.com/Sarunyamk/46group.git',
+    video: 'https://www.youtube.com/embed/2JCPQFZ3CJc?si=Yisye1esglo-V8s3',
+  },
+  {
+    tags: ['React.js', 'Typescript', 'TailwindCSS', 'Framer Motion'],
+    github: 'https://github.com/Sarunyamk/Interactive-quiz.git',
+    video: 'https://www.youtube.com/embed/2JCPQFZ3CJc?si=Yisye1esglo-V8s3',
+  },
+  {
     tags: [
       'React.js',
       'Javascript',

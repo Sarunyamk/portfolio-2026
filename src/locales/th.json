@@ -38,6 +38,18 @@
         "backend": "Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM"
       },
       {
+        "title": "Forty-six Real Estate",
+        "description": "สร้างหน้า web ด้วย Next.js เป็น static website เน้นความสวยงาม ของ motion ต่างๆ",
+        "frontend": "Next.js , Typescript , TailwindCSS , Framer Motion , I18next",
+        "backend": ""
+      },
+      {
+        "title": "Content video quiz",
+        "description": "สร้างหน้า web react.js สร้างชุดคำถาม และตกแต่ง สีของชุดคำถามเองได้ มีหลายชุดคำถามให้เลือก",
+        "frontend": "React.js , Typescript , TailwindCSS , Framer Motion",
+        "backend": ""
+      },
+      {
         "title": "Clone หน้าเว็บ: Gravity",
         "description": "หน้า Gravity สร้างด้วย React.js ออกแบบด้วย TailwindCSS พร้อม scroll effects จาก React Slick และ animation จาก Framer Motion",
         "frontend": "React.js , Javascript , TailwindCSS , React Slick , Framer Motion",

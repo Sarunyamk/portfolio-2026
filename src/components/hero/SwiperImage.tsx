@@ -1,7 +1,6 @@
 'use client';
 
 import { IMAGES, POSITION_STYLES } from '@/constants/swiper-image.constant';
-import { useLanguage } from '@/hooks/useLanguage';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { MotionDiv } from '../motion/wrapper-motion';
@@ -11,8 +10,6 @@ export default function SwiperImage() {
 
   const next = () => setActive((a) => (a + 1) % 3);
   const prev = () => setActive((a) => (a + 2) % 3);
-
-  const { t } = useLanguage();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -70,9 +67,7 @@ export default function SwiperImage() {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-      >
-        ← {t.hero.drag} →
-      </MotionDiv>
+      ></MotionDiv>
     </div>
   );
 }

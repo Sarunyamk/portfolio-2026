@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
   {
     tags: ['React.js', 'Typescript', 'TailwindCSS', 'Framer Motion'],
     github: 'https://github.com/Sarunyamk/Interactive-quiz.git',
-    video: 'https://www.youtube.com/embed/2JCPQFZ3CJc?si=Yisye1esglo-V8s3',
+    video: 'https://www.youtube.com/embed/HnGV60G0ne4?si=Yl4yWNFybFoRF8LU',
   },
   {
     tags: [

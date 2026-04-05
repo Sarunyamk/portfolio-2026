@@ -35,15 +35,15 @@ export function ThreeBackground() {
       0.1,
       1000
     );
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false });
 
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     containerRef.current.appendChild(renderer.domElement);
 
     // Create animated particles
     const particlesGeometry = new THREE.BufferGeometry();
-    const particleCount = 1500;
+    const particleCount = 800;
     const posArray = new Float32Array(particleCount * 3);
 
     // for (let i = 0; i < particleCount * 3; i++) {
@@ -103,10 +103,16 @@ export function ThreeBackground() {
     // Mouse interaction
     let mouseX = 0;
     let mouseY = 0;
+    let rafPending = false;
 
     const handleMouseMove = (event: MouseEvent) => {
-      mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-      mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(() => {
+        mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+        rafPending = false;
+      });
     };
 
     window.addEventListener('mousemove', handleMouseMove);

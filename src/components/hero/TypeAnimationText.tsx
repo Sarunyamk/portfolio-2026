@@ -14,7 +14,7 @@ export default function TypeAnimationText({ typing }: Props) {
       speed={50}
       omitDeletionAnimation={true}
       repeat={Infinity}
-      className="md:font-head text-gradient-1 mb-6"
+      className="text-lg md:text-2xl md:font-head text-gradient-1 mb-6 text-center"
     />
   );
 }

@@ -1,6 +1,8 @@
+import { BASE_URL } from '@/constants/user.constant';
+
 export const siteConfig = {
   name: 'Sarunya Portfolio',
-  url: 'https://sarunya-portfolio.vercel.app',
+  url: BASE_URL,
   description:
     'Full Stack Developer specializing in React.js, Next.js, Node.js, and TypeScript. Building modern, performant web applications with great UX.',
   ogImage: '/og-image.png',
@@ -14,5 +16,5 @@ export const siteConfig = {
     name: 'Sarunya',
     jobTitle: 'Full Stack Developer',
   },
-  logo:'/logo.png'
+  logo: '/logo.png',
 };

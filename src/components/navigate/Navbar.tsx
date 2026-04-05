@@ -40,7 +40,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-gradient-1 font-bold text-lg">
-            <Image src={'/logo.png'} width={60} height={60} alt="logo" />
+            My Portfolio
           </div>
 
           <DesktopMenu activeSection={activeSection} />

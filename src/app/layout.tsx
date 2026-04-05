@@ -1,21 +1,11 @@
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { ThreeBackground } from '@/components/three-background';
+import { fontVariables } from '@/lib/fonts';
 import { personJsonLd } from '@/lib/seo/jsonld';
 import { metadata } from '@/lib/seo/metadata';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
 export { metadata };
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export default function RootLayout({
   children,
@@ -23,7 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${fontVariables} h-full antialiased`}
+    >
       <head>
         <script
           type="application/ld+json"
@@ -33,9 +27,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         <div className="relative min-h-screen three-bg">
           <ThemeProvider
             attribute="class"

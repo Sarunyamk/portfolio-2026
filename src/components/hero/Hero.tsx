@@ -18,7 +18,7 @@ export default function Hero({ t }: LanguageProps) {
         className="mt-20"
       >
         <MotionHeader
-          className="text-5xl md:text-7xl mb-6 bg-clip-text text-gradient-1"
+          className="text-5xl md:text-7xl mb-6 bg-clip-text text-gradient-1 text-center"
           animate={{
             backgroundPosition: ['0%', '100%', '0%'],
           }}

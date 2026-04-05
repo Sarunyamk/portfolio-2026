@@ -1,7 +1,7 @@
 'use client';
 
 import { Labels, Project, ProjectItem } from '@/lib/types/project.type';
-import { Github, StepBack } from 'lucide-react';
+import { ExternalLink, Github, StepBack } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -30,7 +30,7 @@ export default function ProjectCard({ project, item, labels, index }: Props) {
 
   return (
     <div
-      className="relative h-125"
+      className={`relative ${project.deploy ? 'h-137' : 'h-125'}`}
       style={{ perspective: '1200px' }}
       role="article"
       aria-label={item.title}
@@ -89,26 +89,46 @@ export default function ProjectCard({ project, item, labels, index }: Props) {
           </CardContent>
 
           {/* ACTIONS */}
-          <CardFooter className="flex gap-2">
-            <Link
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1"
-            >
-              <Button variant="outline" size="sm" className="w-full gap-1.5">
-                <Github size={14} />
-                {labels.viewGit}
-              </Button>
-            </Link>
+          <CardFooter className="flex flex-col gap-2">
+            <div className="flex w-full gap-2">
+              <Link
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1"
+              >
+                <Button variant="outline" size="sm" className="w-full gap-1.5">
+                  <Github size={14} />
+                  {labels.viewGit}
+                </Button>
+              </Link>
 
-            <Button
-              size="sm"
-              className="flex-1 gap-1.5 bg-gradient-1 text-white border-0 hover:opacity-90"
-              onClick={() => setFlipped(true)}
-            >
-              {t.projects.detail}
-            </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex-1 gap-1.5"
+                onClick={() => setFlipped(true)}
+              >
+                {t.projects.detail}
+              </Button>
+            </div>
+
+            {project.deploy && (
+              <Link
+                href={project.deploy}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button
+                  size="sm"
+                  className="w-full gap-1.5 bg-gradient-1 text-white border-0 hover:opacity-90"
+                >
+                  <ExternalLink size={14} />
+                  {labels.viewProject}
+                </Button>
+              </Link>
+            )}
           </CardFooter>
         </Card>
 

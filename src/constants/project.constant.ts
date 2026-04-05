@@ -3,6 +3,22 @@ import { Project } from '@/lib/types/project.type';
 export const PROJECTS: Project[] = [
   {
     tags: [
+      'Next.js',
+      'Typescript',
+      'TailwindCSS',
+      'Three.js',
+      'Framer Motion',
+      'shadcn/ui',
+      'zod',
+      'Swiper.js',
+      'Auth.js',
+    ],
+    github: 'https://github.com/Sarunyamk/frontend-learning',
+    video: 'https://www.youtube.com/embed/jKtSILb6MhU?si=Xfyaouav3Rgx4O9X',
+    deploy: 'https://my-learning.mm-morning.com',
+  },
+  {
+    tags: [
       'React.js',
       'Javascript',
       'TailwindCSS',
@@ -40,7 +56,7 @@ export const PROJECTS: Project[] = [
   {
     tags: ['React.js', 'Typescript', 'TailwindCSS', 'Framer Motion'],
     github: 'https://github.com/Sarunyamk/Interactive-quiz.git',
-    video: 'https://www.youtube.com/embed/2JCPQFZ3CJc?si=Yisye1esglo-V8s3',
+    video: 'https://www.youtube.com/embed/HnGV60G0ne4?si=Yl4yWNFybFoRF8LU',
   },
   {
     tags: [

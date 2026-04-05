@@ -5,7 +5,7 @@ export const siteConfig = {
   url: BASE_URL,
   description:
     'Full Stack Developer specializing in React.js, Next.js, Node.js, and TypeScript. Building modern, performant web applications with great UX.',
-  ogImage: '/og-image.png',
+  ogImage: '/og-image.jpg',
 
   links: {
     github: 'https://github.com/Sarunyamk',

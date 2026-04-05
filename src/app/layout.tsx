@@ -1,6 +1,6 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from '@/components/theme/theme-provider';
-import { ThreeBackground } from '@/components/three-background';
+import { ThreeBackgroundLazy } from '@/components/three-background-lazy';
 import { fontVariables } from '@/lib/fonts';
 import { personJsonLd } from '@/lib/seo/jsonld';
 import { metadata } from '@/lib/seo/metadata';
@@ -36,7 +36,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <ThreeBackground />
+            <ThreeBackgroundLazy />
             {children}
             <SpeedInsights />
           </ThemeProvider>

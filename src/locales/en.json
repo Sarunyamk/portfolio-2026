@@ -20,10 +20,16 @@
   },
   "projects": {
     "heading": "Featured Projects",
-    "viewProject": "View Project",
+    "viewProject": "View Project on website",
     "viewGit": "View on GitHub",
     "detail": "More Details",
     "items": [
+      {
+        "title": "My Learning Project",
+        "description": "An online learning platform where users can view tutorials and configurations without logging in. Browse a wide variety of learning content and copy example code directly. Supports user authentication via Auth.js.",
+        "frontend": "Next.js , Typescript , TailwindCSS , Three.js , Framer Motion , shadcn/ui , Zod , Swiper.js , Auth.js",
+        "backend": ""
+      },
       {
         "title": "Individual Project : M&M Restaurant",
         "description": "An online restaurant system where users can browse menus and read reviews without logging in. To place an order, users must register and log in. Once logged in: place orders and pay via Stripe, leave reviews after payment, and view order history. The website also features popular menus, reviews, and comments from other customers.",

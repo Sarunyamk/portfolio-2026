@@ -3,6 +3,22 @@ import { Project } from '@/lib/types/project.type';
 export const PROJECTS: Project[] = [
   {
     tags: [
+      'Next.js',
+      'Typescript',
+      'TailwindCSS',
+      'Three.js',
+      'Framer Motion',
+      'shadcn/ui',
+      'zod',
+      'Swiper.js',
+      'Auth.js',
+    ],
+    github: 'https://github.com/Sarunyamk/frontend-learning',
+    video: 'https://www.youtube.com/embed/jKtSILb6MhU?si=Xfyaouav3Rgx4O9X',
+    deploy: 'https://my-learning.mm-morning.com',
+  },
+  {
+    tags: [
       'React.js',
       'Javascript',
       'TailwindCSS',

@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { ThreeBackground } from '@/components/three-background';
 import { fontVariables } from '@/lib/fonts';
@@ -37,6 +38,7 @@ export default function RootLayout({
           >
             <ThreeBackground />
             {children}
+            <SpeedInsights />
           </ThemeProvider>
         </div>
       </body>

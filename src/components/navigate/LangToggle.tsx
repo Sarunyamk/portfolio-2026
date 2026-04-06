@@ -18,7 +18,7 @@ export function LangToggle() {
   };
 
   return (
-    <Button variant="outline" size="icon" onClick={toggle} className="font-semibold text-xs w-9 h-9">
+    <Button variant="outline" size="icon" onClick={toggle} className="font-semibold text-xs w-9 h-9 text-primary">
       {lang === 'en' ? 'TH' : 'EN'}
     </Button>
   );

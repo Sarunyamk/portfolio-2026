@@ -20,11 +20,12 @@ type Props = {
 function buildVideoUrl(raw: string): string {
   const base = raw.replace('youtube.com', 'youtube-nocookie.com');
   const separator = base.includes('?') ? '&' : '?';
-  return `${base}${separator}rel=0&modestbranding=1`;
+  return `${base}${separator}rel=0&modestbranding=1&autoplay=1&mute=1`;
 }
 
 export default function ProjectCard({ project, item, labels, index }: Props) {
   const [flipped, setFlipped] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const videoUrl = buildVideoUrl(project.video);
   const { t } = useLanguage();
 
@@ -69,13 +70,31 @@ export default function ProjectCard({ project, item, labels, index }: Props) {
           <CardContent className="flex flex-col flex-1 pt-0 gap-4">
             {/* VIDEO */}
             <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black mb-6">
+              {!isLoaded ? (
+                <button
+                  onClick={() => setIsLoaded(true)}
+                  className="
+        absolute inset-0 z-10
+        flex items-center justify-center
+        bg-black/60 text-white
+        transition-all duration-500 ease-out
+        hover:scale-[1.03] hover:bg-black/80
+      "
+                >
+                  ▶ Play Video
+                </button>
+              ) : null}
+
               <iframe
-                src={videoUrl}
-                className="absolute inset-0 w-full h-full"
+                src={isLoaded ? videoUrl : undefined}
+                className={`
+      absolute inset-0 w-full h-full
+      transition-opacity duration-500
+      ${isLoaded ? 'opacity-100' : 'opacity-0'}
+    `}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 title={item.title}
-                loading="lazy"
               />
             </div>
 
